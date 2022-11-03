@@ -14,7 +14,7 @@ data_info=json.loads(data)
 #user_list=[]
 for i in data_info:
     #user_list.append([i["name"],i["email"],i["phone"]])
-    sql="INSERT INTO `user`(`name`, `email`, `phoneno`) VALUES ('"+i['name']+"','"+i['email']+"','"+i['phone']+"')"
+    sql="INSERT INTO `user`(`name`, `email`, `phoneno`) VALUES ('"+i['name']+"','"+i['email']+"','"+i['phone']+")"
     mycursor.execute(sql)
     mydb.commit()
     print("data inserted sucessfully"+i["name"])
